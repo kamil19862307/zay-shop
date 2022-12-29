@@ -20,6 +20,8 @@ Route::middleware('auth')->group(function(){
 
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
+    Route::post('/posts/comments/{id}', [catalogController::class, 'comment'])->name('comment');
+
 });
 
 Route::middleware('guest')->group(function(){

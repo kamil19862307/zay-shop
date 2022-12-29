@@ -24,7 +24,7 @@ class AuthController extends Controller
             return redirect(route('home'));
         }
 
-            return redirect(route('login'))->withErrors(['email' => 'Пользователь не найден, либо данные введены не правильно'])->withInput();
+            return redirect(route('login'))->withErrors(['email' => 'Пользователь не найден, либо данные введены неправильно'])->withInput();
     }
 
     public function logout()

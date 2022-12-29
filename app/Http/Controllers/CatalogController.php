@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CommentForm;
 use App\Models\Products;
 use Illuminate\Http\Request;
 
@@ -23,5 +24,10 @@ class CatalogController extends Controller
         return view('single', [
             'product' => $product,
         ]);
+    }
+
+    public function comment($id, CommentForm $request)
+    {
+
     }
 }
